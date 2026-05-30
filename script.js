@@ -4,6 +4,7 @@ const floatingMessage = document.getElementById("floatingMessage");
 const chapterTag = document.querySelector(".chapter-tag");
 const bgMusic = document.getElementById("bgMusic");
 let bgMusicStarted = false;
+bgMusic.volume = 0.2; //music volume
 
 let typing = false;
 let frogsCollected = 0;
@@ -90,18 +91,19 @@ function bunbunThought(text){
 
 function nextDialogue(){
 
+    if (!bgMusicStarted) {
+        bgMusic.volume = 0.35; // soft background vibe
+        bgMusic.play();
+        bgMusicStarted = true;
+    }
+
     if(typing) return;
 
     if(introIndex < intro.length){
-
         typeText(intro[introIndex]);
-
         introIndex++;
-
     }
-
     else{
-
         choices.innerHTML = `
         <button onclick="startAdventure()">
         ✨ CLIMB ABOARD THE MAGIC CARPET
