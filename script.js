@@ -4,7 +4,6 @@ const floatingMessage = document.getElementById("floatingMessage");
 const chapterTag = document.querySelector(".chapter-tag");
 const bgMusic = document.getElementById("bgMusic");
 let bgMusicStarted = false;
-bgMusic.volume = 0.2; //music volume
 
 let typing = false;
 let frogsCollected = 0;
@@ -54,12 +53,6 @@ const intro = [
 
 let introIndex = 0;
 
-
-function testMusic(){
-    bgMusic.play().catch(err => {
-        console.log("Music blocked:", err);
-    });
-}
 
 function typeText(text, callback){
 
