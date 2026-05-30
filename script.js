@@ -54,6 +54,13 @@ const intro = [
 
 let introIndex = 0;
 
+
+function testMusic(){
+    bgMusic.play().catch(err => {
+        console.log("Music blocked:", err);
+    });
+}
+
 function typeText(text, callback){
 
     if(typing) return;
