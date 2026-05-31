@@ -57,6 +57,8 @@ background: linear-gradient(
         0 5px 15px rgba(0,0,0,.05);
 
     position:relative;
+
+    overflow:visible;
 }
 
 .chapter-tag{
@@ -92,31 +94,87 @@ h1{
 
 #bunbun{
 
-    width:140px;
-    height:140px;
+    width:170px;
+    height:150px;
 
-    border-radius:50%;
+    border-radius:50% 50% 45% 45%;
 
     background: linear-gradient(
         145deg,
         #CEFFBD,
         #8FE0C1
     );
-    
+
     display:flex;
     align-items:center;
     justify-content:center;
 
-    animation:
-    floaty 3s ease-in-out infinite;
-    box-shadow: 0 10px 25px rgba(253, 113, 163, 0.3),
-            0 0 20px rgba(206, 255, 189, 0.4);
+    position:relative;
+
+    animation: floaty 3s ease-in-out infinite;
+
+    box-shadow:
+        0 10px 25px rgba(253, 113, 163, 0.3),
+        0 0 20px rgba(206, 255, 189, 0.4);
+}
+
+/* Left Ear */
+#bunbun::before{
+
+    content:'';
+
+    position:absolute;
+
+    width:38px;
+    height:80px;
+
+    left:35px;
+    top:-55px;
+
+    background:linear-gradient(
+        145deg,
+        #CEFFBD,
+        #8FE0C1
+    );
+
+    border-radius:50px;
+
+    transform:rotate(-15deg);
+
+    box-shadow: inset 0 0 0 8px #FFD4E8;
+}
+
+/* Right Ear */
+#bunbun::after{
+
+    content:'';
+
+    position:absolute;
+
+    width:38px;
+    height:80px;
+
+    right:35px;
+    top:-55px;
+
+    background:linear-gradient(
+        145deg,
+        #CEFFBD,
+        #8FE0C1
+    );
+
+    border-radius:50px;
+
+    transform:rotate(15deg);
+
+    box-shadow: inset 0 0 0 8px #FFD4E8;
 }
 
 .bun-face{
 
-    font-size:2rem;
+    font-size:2.6rem;
 }
+
 
 @keyframes floaty{
 
