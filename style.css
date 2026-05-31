@@ -40,7 +40,13 @@ background: linear-gradient(
 
     width:min(900px,92vw);
 
-    background: #FFFDF8;
+    background: linear-gradient(
+        180deg,
+        #FFFDF8,
+        #FFF6F1
+    );
+
+    border: 2px solid #F4E3EE;
 
     border-radius:30px;
 
