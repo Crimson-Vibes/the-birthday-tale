@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'Valentine';
-    src: url('valentine.otf');
+    src: url('Valentine.otf');
 }
 
 @font-face {
     font-family: 'Autumn';
-    src: url('autumn.otf');
+    src: url('Autumn.otf');
 }
 *{
     margin:0;
