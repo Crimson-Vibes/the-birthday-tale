@@ -16,13 +16,12 @@
 body {
     font-family:'Autumn', sans-serif;
 
- background: linear-gradient(
+background: linear-gradient(
     135deg,
-    #FFF0F6,
-    #FFE4F1,
-    #F3E8FF,
-    #E4F4FF,
-    #FFF7D6
+    #FFD4E8,
+    #F0D4FF,
+    #D7E7FF,
+    #FFF0C8
 );
 
     background-size: 400% 400%;
@@ -133,7 +132,7 @@ h1{
     width:100%;
 
     
-    background:#fffaf2;
+   background:#FFF8F0;
 
     border-radius:20px;
 
@@ -141,7 +140,7 @@ h1{
 
      min-height:220px;
 
-    border:2px solid #f4e7d0;
+   border:2px solid #F6D9E8;
 }
 
 #dialogue{
