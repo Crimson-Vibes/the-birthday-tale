@@ -1,13 +1,12 @@
 @font-face {
     font-family: 'Valentine';
-    src: url('fonts/valentine.otf') format('opentype');
+    src: url('valentine.otf');
 }
 
 @font-face {
     font-family: 'Autumn';
-    src: url('fonts/autumn.otf') format('opentype');
+    src: url('autumn.otf');
 }
-
 *{
     margin:0;
     padding:0;
@@ -15,7 +14,7 @@
 }
 
 body {
-    font-family:'Valentine', sans-serif;
+    font-family:'Autumn', sans-serif;
 
  background: linear-gradient(
     135deg,
@@ -69,6 +68,8 @@ h1{
     text-align:center;
 
     color: #BA6C8D;
+    
+    font-family:'Valentine', sans-serif;
 
     margin-bottom:30px;
 }
