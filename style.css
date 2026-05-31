@@ -4,28 +4,29 @@
     box-sizing:border-box;
 }
 
-body{
+body {
+    font-family:'Trebuchet MS', sans-serif;
 
-    font-family:'Trebuchet MS',sans-serif;
+    background: linear-gradient(
+        135deg,
+        #F1B8D5,
+        #FD71A3,
+        #87CAE0,
+        #8FE0C1,
+        #CEFFBD
+    );
 
-  background:
-linear-gradient(
-180deg,
-#fff9f4 0%,
-#fff0f7 50%,
-#f6f0ff 100%);
-    
+    background-size: 400% 400%;
+    animation: dreamyBG 12s ease infinite;
+
     min-height:100vh;
-
     display:flex;
     justify-content:center;
     align-items:center;
-    
+
     overflow-x:hidden;
     overflow-y:auto;
 }
-}
-
 .book{
 
     width:min(900px,92vw);
@@ -78,18 +79,21 @@ h1{
 
     border-radius:50%;
 
-    background:
-    linear-gradient(
-    145deg,
-    #fff6d8,
-    #ffe4b5);
-
+    background: linear-gradient(
+        145deg,
+        #F1B8D5,
+        #FD71A3,
+        #CEFFBD
+    );
+    
     display:flex;
     align-items:center;
     justify-content:center;
 
     animation:
     floaty 3s ease-in-out infinite;
+    box-shadow: 0 10px 25px rgba(253, 113, 163, 0.3),
+            0 0 20px rgba(206, 255, 189, 0.4);
 }
 
 .bun-face{
