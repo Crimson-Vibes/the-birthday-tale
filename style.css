@@ -78,18 +78,10 @@ h1{
     
     font-family:'Valentine', sans-serif;
 
+    position:relative;
+    z-index:10;
+    
     margin-bottom:30px;
-}
-
-.scene{
-
-    display:flex;
-
-    flex-direction:column;
-
-    align-items:center;
-
-    gap:25px;
 }
 
 #bunbun{
@@ -111,6 +103,8 @@ h1{
 
     position:relative;
 
+    z-index:1;
+
     animation: floaty 3s ease-in-out infinite;
 
     box-shadow:
@@ -122,14 +116,13 @@ h1{
 #bunbun::before{
 
     content:'';
-
     position:absolute;
 
     width:38px;
     height:80px;
 
     left:35px;
-    top:-55px;
+    top:-45px; /* was -55px */
 
     background:linear-gradient(
         145deg,
@@ -142,20 +135,21 @@ h1{
     transform:rotate(-15deg);
 
     box-shadow: inset 0 0 0 8px #FFD4E8;
+
+    z-index:-1;
 }
 
 /* Right Ear */
 #bunbun::after{
 
     content:'';
-
     position:absolute;
 
     width:38px;
-    height:80px;
+    height:80 px;
 
     right:35px;
-    top:-55px;
+    top:-45px; /* was -55px */
 
     background:linear-gradient(
         145deg,
@@ -168,28 +162,26 @@ h1{
     transform:rotate(15deg);
 
     box-shadow: inset 0 0 0 8px #FFD4E8;
+
+    z-index:-1;
 }
 
 .bun-face{
-
     font-size:2.6rem;
 }
 
 
-@keyframes floaty{
+.scene{
 
-    0%{
-        transform:translateY(0px);
-    }
+    display:flex;
 
-    50%{
-        transform:translateY(-10px);
-    }
+    flex-direction:column;
 
-    100%{
-        transform:translateY(0px);
-    }
+    align-items:center;
+
+    gap:25px;
 }
+
 
 .speech-box{
 
