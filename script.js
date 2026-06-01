@@ -66,7 +66,7 @@ const intro = [
 
 {
     text: "I have decided to ignore that information.",
-    face: "｡•̀ᴗ-"
+    face: "◕⩊~"
 },
 
 {
