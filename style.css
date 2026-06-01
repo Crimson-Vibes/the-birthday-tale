@@ -103,7 +103,7 @@ h1{
 
     position:relative;
 
-    isolation:isolate; /* important */
+    z-index:2;
 
     animation: floaty 3s ease-in-out infinite;
 
@@ -119,11 +119,11 @@ h1{
 
     position:absolute;
 
-    width:38px;
-    height:80px;
+    width:42px;
+    height:85px;
 
-    left:35px;
-    top:-55px;
+    left:32px;
+    top:-45px;
 
     background:linear-gradient(
         145deg,
@@ -135,9 +135,10 @@ h1{
 
     transform:rotate(-15deg);
 
-    box-shadow: inset 0 0 0 8px #FFD4E8;
+    box-shadow:
+        inset 0 0 0 8px #FFD4E8;
 
-    z-index:-1; /* important */
+    z-index:-1;
 }
 
 /* Right Ear */
@@ -147,11 +148,11 @@ h1{
 
     position:absolute;
 
-    width:38px;
-    height:80px;
+    width:42px;
+    height:85px;
 
-    right:35px;
-    top:-55px;
+    right:32px;
+    top:-45px;
 
     background:linear-gradient(
         145deg,
@@ -163,16 +164,23 @@ h1{
 
     transform:rotate(15deg);
 
-    box-shadow: inset 0 0 0 8px #FFD4E8;
+    box-shadow:
+        inset 0 0 0 8px #FFD4E8;
 
-    z-index:-1; /* important */
+    z-index:-1;
 }
 
+/* Bunny Face */
 .bun-face{
 
     font-size:2.6rem;
-}
 
+    position:relative;
+
+    z-index:3;
+
+    user-select:none;
+}
 
 @keyframes floaty{
 
@@ -188,7 +196,6 @@ h1{
         transform:translateY(0px);
     }
 }
-
 .scene{
 
     display:flex;
