@@ -17,37 +17,87 @@ const frogLocations = [
 "Secret Files"
 ];
 
+const bunFace = document.getElementById("bunFace");
+function setFace(face){
+    bunFace.textContent = face;
+}
+
 const intro = [
 
-"Hellooooooooo.",
+{
+    text: "Hellooooooooo.",
+    face: "˶◕ᗜ◕˵"
+},
 
-"I have been informed that today is your birthday.",
+{
+    text: "I have been informed that today is your birthday.",
+    face: "✧◕‿◕✧"
+},
 
-"I have also been informed that you don't feel like celebrating.",
+{
+    text: "I have also been informed that you don't feel like celebrating.",
+    face: "¬‿¬"
+},
 
-"Which is a bold thing to say while opening a birthday website made specifically for you.",
+{
+    text: "Which is a bold thing to say while opening a birthday website made specifically for you.",
+    face: "ಠᴗಠ"
+},
 
-"That's like walking into a bakery and saying you're not thinking about cake.",
+{
+    text: "That's like walking into a bakery and saying you're not thinking about cake.",
+    face: "◉‿◉"
+},
 
-"Suspicious behavior.",
+{
+    text: "Suspicious behavior.",
+    face: "¬_¬"
+},
 
-"Very suspicious behavior.",
+{
+    text: "Very suspicious behavior.",
+    face: "ಠ_ಠ"
+},
 
-"So after careful consideration...",
+{
+    text: "So after careful consideration...",
+    face: "( •̀ᴗ•́ )"
+},
 
-"I have decided to ignore that information.",
+{
+    text: "I have decided to ignore that information.",
+    face: "ᕕ( ᐛ )ᕗ"
+},
 
-"Welcome to your birthday.",
+{
+    text: "Welcome to your birthday.",
+    face: "✧٩(ˊᗜˋ*)و✧"
+},
 
-"Please remain calm during the ride.",
+{
+    text: "Please remain calm during the ride.",
+    face: "◕ᴗ◕"
+},
 
-"Or don't.",
+{
+    text: "Or don't.",
+    face: " ツ "
+},
 
-"Either way, we're doing this.",
+{
+    text: "Either way, we're doing this.",
+    face: "( •̀ω•́ )✧"
+},
 
-"Brace yourself...",
+{
+    text: "Brace yourself...",
+    face: "◉_◉"
+},
 
-"Because our magic carpet is waiting."
+{
+    text: "Because our magic carpet is waiting.",
+    face: "૮₍ ˃̵ᴗ˂̵ ₎ა"
+}
 
 ];
 
@@ -99,10 +149,15 @@ function nextDialogue(){
     if(typing) return;
 
     if(introIndex < intro.length){
-        typeText(intro[introIndex]);
+
+        setFace(intro[introIndex].face);
+
+        typeText(intro[introIndex].text);
+
         introIndex++;
     }
     else{
+
         choices.innerHTML = `
         <button onclick="startAdventure()">
         ✨ CLIMB ABOARD THE MAGIC CARPET
@@ -110,6 +165,7 @@ function nextDialogue(){
         `;
     }
 }
+
 function showAchievement(text){
 
     const achievement =
