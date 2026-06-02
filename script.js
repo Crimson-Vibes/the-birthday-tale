@@ -1765,8 +1765,10 @@ choices.innerHTML = `
    `;
 }
 
-choices.innerHTML = `
-<button onclick="nextDialogue()">
-Continue
-</button>
-`;
+window.onload = function () {
+    document.getElementById("choices").innerHTML = `
+        <button onclick="nextDialogue()">
+            Continue
+        </button>
+    `;
+};
